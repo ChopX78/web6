@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: auto;
+    width: 900px;
+    height: auto;
+    background-color: #282727;
+    font-family: 'Work Sans', sans-serif;
+    color: #f7faf8;
+    padding: 0 15px;
+}
+.header, .footer{
+    width: auto;
+    height: 70px;
+    display: flex;
+
+}
+.header{
+    margin: 0 -1px 10px -1px;
+}
+.headBlock{
+    width: 16.6%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+    font-size: 14pt;
+}
+.headBlock:nth-child(1){
+    background-color: #3faeee;
+}
+.headBlock:nth-child(2){
+    background-color: #4bab3f;
+}
+.headBlock:nth-child(3){
+    background-color: #e8c954;
+}
+.headBlock:nth-child(4){
+    background-color: #743be1;
+}
+.headBlock:nth-child(5){
+    background-color: #d75544;
+}
+.headBlock:nth-child(6){
+    background-color: #cb39c7;
+}
+.main{
+    width: auto ;
+    height: auto;
+    display: flex;
+}
+.left{
+    width: 25%;
+}
+.right{
+    width: 75%;
+}
+.lBlock{
+    width: auto;
+    background-color: #d75544;
+    height: 80px;
+    margin: 5px 10px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10pt;
+}
+.smallIcon{
+    width: 10px;
+    height: 10px;
+    background-image: url("https://www.seekpng.com/png/full/866-8666926_png-file-white-arrow-button-png.png");
+    background-position: center;
+    background-size: cover;
+}
+.slider{
+    width: auto;
+    height: 200px;
+    margin: 5px 0 10px 5px;
+    font-size: 10pt;
+    overflow: hidden;
+
+}
+.sliderLine{
+    width: 648px;
+    left: 0;
+    height: 200px;
+    display: flex;
+    position: relative;
+    transition: all 2s ease;
+
+}
+.leftPart,.rightPart{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftPart{
+    position: relative;
+    left: 0;
+    top:-204px;
+}
+.rightPart{
+    position: relative;
+    left: 75%;
+    top:-604px;
+}
+.rightPart>.arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url("https://cdn.icon-icons.com/icons2/2131/PNG/512/next_arrow_icon_131519.png");
+    background-position: center;
+    background-size: cover;
+}
+.leftPart>.arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url("https://cdn.icon-icons.com/icons2/2131/PNG/512/next_arrow_icon_131519.png");
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(-1);
+}
+.midPart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 25%;
+    top:-404px;
+}
+.button{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #4bab3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.button:hover{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #27881d;
+}
+.underSlider{
+    width: auto;
+    height: 100px;
+    display: flex;
+    margin: 15px -10px 0 -5px;
+}
+.underSliderBlock{
+    width: 50%;
+    height: 100%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10pt;
+    padding: 0 5px;
+}
+.underSliderBlock:nth-child(1){
+    background-color: #e8c954;
+}
+.underSliderBlock:nth-child(2){
+    background-color: #3faeee;
+}
+.icons{
+    width: auto;
+    height: 150px;
+    margin: 15px -10px 0 -5px;
+    display: flex;
+}
+.phrase{
+    width: auto;
+    justify-content: center;
+    display: flex;
+    height: 30px;
+    font-size: 20pt;
+    margin: 15px -10px 0 -5px;
+}
+.iconBlock{
+    background-color: aqua;
+    width: 33%;
+    height: 100%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10pt;
+    text-align: center;
+    position: relative;
+
+}
+.iconBlock:nth-child(1){
+    background-color: #48c536;
+}
+.iconBlock:nth-child(2){
+    background-color: #743be1;
+}
+.iconBlock:nth-child(3){
+    background-color: #d75544;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+}
+.iconBlock:nth-child(1)>.icon{
+    background-image: url("https://www.svgrepo.com/show/65761/save-icon-silhouette.svg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 10px;
+}
+.iconBlock:nth-child(2)>.icon{
+    background-image: url("https://www.svgrepo.com/show/144022/full-screen-arrows.svg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 10px;
+}
+.iconBlock:nth-child(3)>.icon{
+    background-image: url("https://www.brentanalexander.com/images/gear.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 10px;
+}
+.text{
+    position: absolute;
+    top: 70px;
+    padding: 0 10px;
+}
+.footer{
+    background-color: #1e1c1c;
+    margin-top: 15px;
+    font-size: 10pt;
+    display: flex;
+}
+.links{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.linkIcon{
+    width: 30px;
+    height: 30px;
+}
+.linkIcon:nth-child(1){
+    background-image: url("https://www.pngplay.com/wp-content/uploads/12/Vkontakte-Logo-Transparent-Clip-Art-PNG.png");
+    background-size: cover;
+    background-position: center;
+}
+.linkIcon:nth-child(2){
+    background-image: url("https://rovesnik-zar.ru/wp-content/uploads/kak-pomenyat-familiyu-v-odnoklassnikah.png");
+    background-size: cover;
+    background-position: center;
+}
+.linkIcon:nth-child(3){
+    background-image: url("https://www.freepngimg.com/thumb/facebook/141145-logo-circle-facebook-free-download-png-hd.png");
+    background-size: cover;
+    background-position: center;
+
+}
+.linkIcon:nth-child(4){
+    background-image: url("https://cdn.onlinewebfonts.com/svg/img_146816.png");
+    background-size: cover;
+    background-position: center;
+}
+.linkIcon:nth-child(5){
+    background-image: url("https://i.pinimg.com/originals/8b/76/e8/8b76e8f97a0155900235c34325965693.png");
+    background-size: cover;
+    background-position: center;
+}
+.creator{
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rights{
+    width: 33%;
+    display: flex;
+    justify-content: right;
+    align-items: center ;
+    padding-right: 10px;
+}
