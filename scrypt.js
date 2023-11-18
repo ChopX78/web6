@@ -1,11 +1,13 @@
-const sliderLine = document.querySelector('.sliderLine')
-const btnLeft = document.querySelector('.leftPart>.arrow')
-const  btnRight = document.querySelector('.rightPart>.arrow')
-let offset = 0
-btnLeft.addEventListener('click', sLeft)
-btnRight.addEventListener('click', sRight)
+const sliderLine = document.querySelector('.sliderLine');
+const btnLeft = document.querySelector('.leftPart > .arrow');
+const btnRight = document.querySelector('.rightPart > .arrow');
+let offset = 0;
 let lastClickTime = 0;
 let autoSlideInterval;
+
+btnLeft.addEventListener('click', sLeft);
+btnRight.addEventListener('click', sRight);
+
 function sLeft() {
     let currentTime = new Date().getTime();
     if (currentTime - lastClickTime > 2000) {
@@ -25,8 +27,10 @@ function sLeft() {
             sliderLine.style.left = -offset + 'px';
         }
         lastClickTime = currentTime;
+        startAutoSlide();
     }
 }
+
 function sRight() {
     let currentTime = new Date().getTime();
     if (currentTime - lastClickTime > 2000) {
@@ -46,24 +50,19 @@ function sRight() {
             sliderLine.style.left = -offset + 'px';
         }
         lastClickTime = currentTime;
+        startAutoSlide();
     }
 }
+
 function startAutoSlide() {
-    autoSlideInterval = setInterval(function () {
-        sRight()
-    }, 5000)
+    stopAutoSlide();
+    autoSlideInterval = setInterval(function() {
+        sRight();
+    }, 5000);
 }
+
 function stopAutoSlide() {
-    clearInterval(autoSlideInterval)
+    clearInterval(autoSlideInterval);
 }
+
 startAutoSlide();
-document.addEventListener('click', function () {
-    sRight()
-    stopAutoSlide()
-    setTimeout(startAutoSlide, 5000)
-});
-document.addEventListener('click', function () {
-    sLeft()
-    stopAutoSlide()
-    setTimeout(startAutoSlide, 5000)
-});
